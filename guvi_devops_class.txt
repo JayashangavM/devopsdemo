@@ -1,0 +1,113 @@
+			Git command book
+
+			git config commands:
+
+git config --global username
+git config --global email
+git config --global init.defaultBranch main
+
+			Repository initialization:
+
+git init
+git clone<url>
+git remote -v
+git remote add origin<url>
+git remote remove origin
+gitt remote set-url origin <url>
+
+			working Directory & staging:
+
+git status
+git add <file>
+git add .
+git reset <file>
+git restore <file>
+
+			commit commands:
+
+git commit -m "msg"        :saves staged changes
+git commit -am "msg"	   :stages & commits tracked files
+git commit --amend	   :modifies last commit
+git log			   :shows commit history
+git log --oneline	   :compact commit history
+git show		   :shows details of a commit
+
+			Branch management(git flow)
+
+git branch			:lists branches
+git branch <name>		:creates a new branch
+git branch -d <name>		:deletes branch
+git checkout <branch>
+git checkout -d <branch>
+git merge <branch>
+git rebase <branch>
+
+			Remote operations(github interactions)
+
+git remote -v         : List configured remote servers.
+git fetch/pull        : Retrieve changes from remote.
+git push              : Send local changes to remote.
+
+			Authentication & security(ssh)
+
+ssh-keygen			:creates SSH key
+ssh-add~/.ssh/id_ed25519	:adds SSH key
+ssh -T git@github.com		:Tests github connection
+
+			Tagging & Releases
+
+git tag
+git tag v1.0.0
+git tag -av1.0.0 -m "msg"
+git push origin --tags
+
+			undo&recovery
+
+git revert <commit>
+git revert --soft HEAD-1
+git reset --hard Head-1
+git reflog
+
+
+git stash
+git stash list
+git stash apply
+git stash pop
+
+			final removal & cleanup
+
+git rm--cached<file>
+git clean -f
+git clean -fd
+
+			git flow helper commands(optional tool)
+
+git flow init
+git flow feature start <name>
+git flow release start <ver>
+git flow hotfix
+
+			github actions control
+
+gh workflow list
+gh workflow run
+gh run list
+gh run view
+
+			inspection & debugging command
+
+git blame<file>
+git diff
+git shortlog
+
+git discribe
+
+			typical github workflow(with meaning)
+
+git clone <repo>
+git checkout -b feature/x
+git add .
+git commit -m "msg"
+git push origin feature/x
+git checkout main
+git pull origin main
