@@ -75,7 +75,7 @@ git stash apply
 git stash pop
 
 			final removal & cleanup
-
+git rm <file>
 git rm--cached<file>
 git clean -f
 git clean -fd
@@ -110,4 +110,5 @@ git add .
 git commit -m "msg"
 git push origin feature/x
 git checkout main
+
 git pull origin main
