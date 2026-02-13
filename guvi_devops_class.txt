@@ -112,3 +112,25 @@ git push origin feature/x
 git checkout main
 
 git pull origin main
+
+
+update system:
+sudo apt update && sudo apt upgrade -y
+
+install required tools:
+sudo apt install -y curl wget git unzip
+
+install docker:
+sudo apt install -y docker.io
+sudo systemctl start docker
+sudo systemctl enable docker
+
+run docker without sudo:
+sudo usermod -ag docker $USER
+newgrp docker
+
+verify:
+docker version
+
+
+
