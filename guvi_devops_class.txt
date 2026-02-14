@@ -132,5 +132,18 @@ newgrp docker
 verify:
 docker version
 
+install kubernetes in documentation in website : https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/
+
+installation of minicube:
+
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+chmod +x minikube-linux-amd64
+sudo mv minikube-linux-amd64 /usr/local/bin/minikube
+minikube start --driver=docker
+minikube version
+kubectl cluster-info
+
+
+
 
 
